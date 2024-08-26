@@ -1,0 +1,247 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Times New Roman', Times, serif;
+}
+html,body{
+    width: 100%;
+    height: 100vh;
+}
+
+.navbar-custom {
+    background-color: rgb(22, 136, 217);
+}
+
+.container-fluid{
+    width: 100%;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly !important;
+}
+
+.btn-status{
+    min-width: 130px;
+    height: 40px;
+    background-color: black;
+    color: white;
+    border: 2px solid white;
+}
+button:hover{
+    background-color: rgba(224, 11, 11, 0.885);
+}
+/*
+Thanh tìm kiếm
+*/
+
+.input-group{
+    width:40%;
+
+}
+
+
+.btn-primary{
+    background-color: black;
+    border :none;
+}
+.btn-primary:hover{
+   background-color: rgba(224, 11, 11, 0.885);
+   
+}
+.logout{
+    min-width: 130px;
+    height: 40px;
+    background-color: black;
+    color: white;
+    border: 2px solid white;
+    
+}
+.notifications{
+    width: 80px;
+    height: 40px;
+    border-radius: 12px;
+    border: 2px solid black;
+    position: relative;
+    background-color: black;
+    color: white;
+}
+.notifications:focus{
+    background-color:  rgba(224, 11, 11, 0.885);
+}
+.notifications-detail{
+    margin-top: 15px;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    width: 250px;
+    height: 100px;
+    background-color: white;
+    color: black !important;
+    border: 1px solid black;
+    left: 0;
+    top: 120%;
+    
+}
+.fa-solid,.fa-user{
+    margin: auto 0;
+}
+.notifications-detail-item{
+    display: flex;
+
+    flex-direction: row;
+}
+.notifications-detail-item:hover{
+    background-color: #cac4c4;
+}
+.notifications-detail-item-noidung {
+    
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+   
+}
+
+.notifications-detail-item-noidung-content{
+    font-weight: 200;
+    margin-left: 15px;
+}
+.notifications-detail-item-noidung-header{
+   
+    font-weight: 900;
+    margin-left: 15px;
+}
+.form-status{
+    margin-top: 40px;
+    width: 90%;
+    height: 500px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+}
+.form-update{
+    margin-top: 40px;
+    width: 80%;
+    height: 300px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    
+}
+.btn-primary{
+    margin-top: 40px;
+}
+.form-group-tieude{
+    position: relative;
+}
+.form-container-theloai{
+    position: absolute;
+    right: 0;
+    top: 0;
+    cursor: pointer;
+}
+
+.form-container-theloai:hover i{
+    color: black;
+}
+.form-container-theloai i{
+    margin-left: 8px;
+    color: #7b7878;
+}
+.form-container-theloai_list {
+    display: none;
+    background-color: white;
+    padding-left: 5px;
+    border: 1px solid black ;
+    border-radius: 5px;
+    color: #7b7878;
+    flex-direction: column;
+    justify-content: center;
+}
+.form-container-theloai_list2 {
+    display: none;
+    background-color: white;
+    padding-left: 5px;
+    border: 1px solid black ;
+    border-radius: 5px;
+    color: #7b7878;
+    flex-direction: column;
+    justify-content: center;
+}
+.form-container-theloai_list div:hover {
+    color: black;
+}
+.btn-status.active {
+    background-color: rgba(224, 11, 11, 0.885);
+}
+/* tim kiem */
+.form-control{
+    border: 2px solid white;
+    border-radius: 0;
+}
+.form-control:focus{
+    
+    outline: unset;
+    box-shadow: unset;
+    border:none;
+    border: 2px solid white;
+}
+.input-group-list{
+    width: 100%;
+    height: 300px;
+    display: none;
+    background-color: white;
+    border: 1px solid black ;
+    border-radius:0;
+    color: #7b7878;
+    flex-direction: column;
+    justify-content: center;
+    position: absolute;
+    top: 105%;
+    left: 0.5px;
+    z-index: 1;
+}
+.form-container-theloai-Timkiem{
+    position: absolute;
+    right: 0;
+    z-index: 2;
+    padding-right: 5px;
+}
+.form-container-theloai-Timkiem::before{
+    content: "";
+    display: block;
+    position: absolute;
+    border-left: 1px solid #635f5f;
+    height: 16px;
+    top: 4px;
+    left: -4px;
+}
+
+.lichsutimkiem{
+    width: 100%;
+    height: 200px;
+    position: absolute;
+   
+    padding-left: 10px ;
+    left: 0;
+    top: 0;
+  }
+.lichsutimkiem p{
+margin: 0;
+}
+.lichsutimkiem-list{
+padding-left: 0;
+list-style: none;
+}
+.lichsutimkiem-list a{
+text-decoration: none;
+color: #635f5f;
+}
+.lichsutimkiem-list-item:hover{
+background-color: #f0eded;
+}
+
+/*
+Notifications
+*/

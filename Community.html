@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trang Ca Nhan</title>
+   
+    <!--
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" rel="stylesheet">
+    -->
+    <link href="https://cdn.jsdelivr.net/npm/@icon/entypo@1.0.3/entypo.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="./asset/css/Comunity.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Pattaya&family=Zeyada&display=swap" rel="stylesheet">
+    <style>
+       
+    </style>
+</head>
+
+<body>
+   
+    <div class="navbar" style="margin-bottom: 20px;">
+        <div class="list">
+        
+            <img src="./asset/image/Logo.png" alt="Icon ứng dụng" style="width: 200px; height: 50px; object-fit: contain;margin-right: 30px;">
+        </div>
+        <div class="search" >
+            <input type="search"  placeholder="Search user or post" >
+            <button class="btn btn-dark" style="height: 40px; border: none; margin-left: 10px; " type="button"><i class="fa-solid fa-magnifying-glass"></i></button>
+        </div>
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQxRR-iV1yCmBS5othn3l1mjA3ziUS3SmLjZWRR6wqi1w&s" alt="Ảnh đại diện " style="width: 50px;height: 50px; border-radius: 50%;">
+    </div>
+
+        </div>
+       
+    </div>
+
+    <div class="container">
+        <div class="row">
+           <div class="col-lg-2 ">
+                <div class="card left-profile-card">
+                    <div class="card-body">
+                        <ul class="nav">
+
+                            <li ><button class="post" onclick="window.location.href='/PostAction.html'"><i class="fa-solid fa-square-plus" ></i>Post</button> </li>
+                            <li><button class="update-infomation" onclick="window.location.href='/AcountUser.html'"><i class="fa-solid fa-circle-user"></i>Account</button></li>
+                            <li ><button class="notifications" onclick="window.location.href='/Notifications.html'" onclick="showNotifications()"><i class="fa-solid fa-bell" ></i> Notifications</button></li>
+                            <li ><button class="about-us" onclick="showAboutUs()"> <i class="fa-solid fa-users-between-lines"></i> About us</button></li>
+                            <li ><button class="help" onclick="showHelp()"><i class="fa-solid fa-circle-question"></i> Help</button></li>
+                            <li > <button class="logout" onclick="window.location.href='/Home/dangxuat'"><i class="fa-solid fa-right-from-bracket"></i> Log out </button></li>
+                        </ul>
+              
+                   
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-10"> 
+                
+                <div class="card right-profile-card">
+                    <div class="card-body">
+                
+                         <div class="card-block">
+                             <img src="https://i.pinimg.com/736x/05/e8/da/05e8dac6dd3b289e26c11c766956a785.jpg" alt="Ảnh bài đăng" style="width: 100%; height: 170px; object-fit: cover;">
+                                <div class="card-details">
+                                            <img src="https://cdn.sforum.vn/sforum/wp-content/uploads/2023/11/avatar-dep-120.jpg" alt="Ảnh đại diện tác giả" class="picture_author" style="width: 30px;height: 30px; object-fit: cover; border-radius: 25px; margin-right: 10px; margin-left: 10px;">
+                                            <div class="about">
+                                                <div class="description" id="10" class="Lay_thong_tin"  style="font-size: 15px; line-height: 1.2;">Gọi em là sweet girl vì em không sour</div>
+                                                <div class="name-author" style="margin-top: 5px; font-size: 12px; color: rgb(112, 108, 108);">Bad girl</div>
+                                                                <div class="other" style="font-size: 12px; color: rgb(112, 108, 108);">
+                                                                    <div class="like">100 <i class="fa-solid fa-thumbs-up"></i> </div>
+                                                                    <div class="comment">5 <i class="fa-solid fa-comment"></i></div>
+                                                                    <div class="date">3 hours ago</div>
+                                                                </div> <!--other-->
+                                             </div> <!--about-->
+                                </div> <!--Card-details-->
+                        </div> <!--Card-block-->
+
+                        <!--Item2-->
+                        <div class="card-block">
+                            <img src="https://sheworedotnet.files.wordpress.com/2023/12/image-12.png" alt="Ảnh bài đăng" style="width: 100%; height: 170px; object-fit: cover;">
+                               <div class="card-details">
+                                           <img src="https://rubee.com.vn/wp-content/uploads/2021/05/logo-Arsenal.jpg" alt="Ảnh đại diện tác giả" class="picture_author" style="width: 30px;height: 30px; object-fit: cover; border-radius: 25px; margin-right: 10px; margin-left: 10px;">
+                                           <div class="about">
+                                               <div class="description" id="10" class="Lay_thong_tin"  style="font-size: 15px; line-height: 1.2;">Kai Havertz 2024 - Crazy Skills and Goals</div>
+                                               <div class="name-author" style="margin-top: 5px; font-size: 12px; color: rgb(112, 108, 108);">Arsenal</div>
+                                                               <div class="other" style="font-size: 12px; color: rgb(112, 108, 108);">
+                                                                   <div class="like">10 <i class="fa-solid fa-thumbs-up"></i> </div>
+                                                                   <div class="comment">10 <i class="fa-solid fa-comment"></i></div>
+                                                                   <div class="date">2 hours ago</div>
+                                                               </div> <!--other-->
+                                            </div> <!--about-->
+                               </div> <!--Card-details-->
+                       </div> <!--Card-block-->
+
+                       <!--Item 3-->
+                       <div class="card-block">
+                        <img src="https://media-cdn-v2.laodong.vn/Storage/NewsPortal/2019/7/1/741911/Hay-Trao-Cho-Anh-3.jpg" alt="Ảnh bài đăng" style="width: 100%; height: 170px; object-fit: cover;">
+                           <div class="card-details">
+                                       <img src="https://hoanghamobile.com/tin-tuc/wp-content/uploads/2023/08/anh-anime-nam-7.jpg" alt="Ảnh đại diện tác giả" class="picture_author" style="width: 30px;height: 30px; object-fit: cover; border-radius: 25px; margin-right: 10px; margin-left: 10px;">
+                                       <div class="about">
+                                           <div class="description" id="10" class="Lay_thong_tin"  style="font-size: 15px; line-height: 1.2;">MV "Hãy trao cho anh" làm mưa làm gió</div>
+                                           <div class="name-author" style="margin-top: 5px; font-size: 12px; color: rgb(112, 108, 108);">HTM Team</div>
+                                                           <div class="other" style="font-size: 12px; color: rgb(112, 108, 108);">
+                                                               <div class="like">25 <i class="fa-solid fa-thumbs-up"></i> </div>
+                                                               <div class="comment">100 <i class="fa-solid fa-comment"></i></div>
+                                                               <div class="date">7 hours ago</div>
+                                                           </div> <!--other-->
+                                        </div> <!--about-->
+                           </div> <!--Card-details-->
+                   </div> <!--Card-block-->
+
+                   <!--Item 4-->
+                   <div class="card-block">
+                    <img src="https://png.pngtree.com/thumb_back/fw800/background/20231221/pngtree-background-of-people-under-the-beautiful-starry-sky-image_15547123.png" alt="Ảnh bài đăng" style="width: 100%; height: 170px; object-fit: cover;">
+                       <div class="card-details">
+                                   <img src="https://inkythuatso.com/uploads/thumbnails/800/2022/03/anh-dai-dien-buon-nam-1-30-13-36-56.jpg" alt="Ảnh đại diện tác giả" class="picture_author" style="width: 30px;height: 30px; object-fit: cover; border-radius: 25px; margin-right: 10px; margin-left: 10px;">
+                                   <div class="about">
+                                       <div class="description" id="10" class="Lay_thong_tin"  style="font-size: 15px; line-height: 1.2;">A Sky full of stars</div>
+                                       <div class="name-author" style="margin-top: 5px; font-size: 12px; color: rgb(112, 108, 108);">Sad boy</div>
+                                                       <div class="other" style="font-size: 12px; color: rgb(112, 108, 108);">
+                                                           <div class="like">25 <i class="fa-solid fa-thumbs-up"></i> </div>
+                                                           <div class="comment">100 <i class="fa-solid fa-comment"></i></div>
+                                                           <div class="date">7 hours ago</div>
+                                                       </div> <!--other-->
+                                    </div> <!--about-->
+                       </div> <!--Card-details-->
+               </div> <!--Card-block-->
+
+               <!--Item 5-->
+               <div class="card-block">
+                <img src="https://vitracotour.com/wp-content/uploads/2022/04/cau-rong-da-nang-3_1629438765.png" alt="Ảnh bài đăng" style="width: 100%; height: 170px; object-fit: cover;">
+                   <div class="card-details">
+                               <img src="https://static-images.vnncdn.net/files/publish/2023/6/28/youtuber-giau-nhat-the-gioi-bi-to-an-theo-tham-hoa-tau-ngam-titan-180.jpg" alt="Ảnh đại diện tác giả" class="picture_author" style="width: 30px;height: 30px; object-fit: cover; border-radius: 25px; margin-right: 10px; margin-left: 10px;">
+                               <div class="about">
+                                   <div class="description" id="10" class="Lay_thong_tin"  style="font-size: 15px; line-height: 1.2;">Da Nang , Viet Nam</div>
+                                   <div class="name-author" style="margin-top: 5px; font-size: 12px; color: rgb(112, 108, 108);">Mr Beast</div>
+                                                   <div class="other" style="font-size: 12px; color: rgb(112, 108, 108);">
+                                                       <div class="like">15 <i class="fa-solid fa-thumbs-up"></i> </div>
+                                                       <div class="comment">100 <i class="fa-solid fa-comment"></i></div>
+                                                       <div class="date">9 hours ago</div>
+                                                   </div> <!--other-->
+                                </div> <!--about-->
+                   </div> <!--Card-details-->
+           </div> <!--Card-block-->
+ 
+                    </div>  <!--Card body right-->
+                </div> <!--Card right-->
+            </div><!--Layout bootstrap-->
+
+        </div><!--Row-->
+
+    </div> <!--Container-->
+    
+    <script>
+               overlay.addEventListener('click', function(event) {
+                if (event.target === overlay) {
+                    hideUpdateForm(); // Gọi hàm ẩn form khi click ra ngoài vùng chứa form
+                }
+            });
+            
+            hideTB.addEventListener('click',function(event){
+                if(event.target === hideTB){
+                    hideNotifications();
+                }
+            });
+            overDevelop.addEventListener('click',function(event){
+                 if(event.target === overDevelop){
+                      hideAbouUs();
+                 }
+            });
+            giup.addEventListener('click',function(event){
+                    if(event.target === giup){
+                        hideHelp();
+                    }
+            });
+      /*
+      Form container
+      */
+         function showForm() {
+        resetForm();
+        var overlay = document.getElementById("overlay");
+        var formContainer = document.getElementById("form-container");
+        overlay.style.display = "block";
+        formContainer.style.display = "block";
+    }
+    function showAboutUs(){
+        var over = document.getElementById("overDevelop");
+        var show = document.getElementById("DevelopTeam");
+        over.style.display = "block";
+        show.style.display = "block";
+    }
+    function hideAbouUs(){
+        var over = document.getElementById("overDevelop");
+        var show = document.getElementById("DevelopTeam");
+        over.style.display = "none";
+        show.style.display = "none";
+    }
+    function showHelp(){
+        var over = document.getElementById("giup");
+        var show = document.getElementById("Giupdo");
+        over.style.display = "block";
+        show.style.display = "block";
+    }
+    function hideHelp(){
+        var over = document.getElementById("giup");
+        var show = document.getElementById("Giupdo");
+        over.style.display = "none";
+        show.style.display = "none";
+    }
+    function hideForm() {
+        resetForm();
+        var overlay = document.getElementById("overlay");
+        var formContainer = document.getElementById("form-container");
+        overlay.style.display = "none";
+        formContainer.style.display = "none";
+        }
+        
+        
+    function resetForm() {
+    var overlay = document.getElementById("overlay");
+    var formContainer = document.getElementById("form-container");
+    var titleInput = document.querySelector('.form-group-tieude input');
+    var contentInput = document.querySelector('.form-group textarea');
+    var fileInput = document.querySelector('.form-group input[type="file"]');
+    var formContainerTheloai = document.querySelector('.form-container-theloai-Tieude');
+    var openFormtheloai = document.querySelector('.form-container-theloai_list1');
+
+    overlay.style.display = "none";
+    formContainer.style.display = "none";
+    titleInput.value = "";
+    contentInput.value = "";
+    fileInput.value = "";
+    openFormtheloai.style.display = 'none';
+    formContainerTheloai.firstChild.nodeValue = "Thể loại";
+}
+
+
+    function formtheloai(index){
+        var list = document.querySelector('.form-container-theloai_list' + index);
+        if (list.style.display === 'none') {
+            list.style.display = 'block';
+        } else {
+            list.style.display = 'none';
+        }
+    }
+                    /*
+                    Form update
+                    */
+                   
+                    function resetUpdateForm() {
+    var overlay = document.getElementById("overlayout");
+    var formUpdateContainer = document.getElementById("update-form-container");
+
+    // Select the input elements by their class or ID and set their values to empty strings
+    var emailInput = document.querySelector('.form-update #email');
+    var customernameInput = document.querySelector('.form-update [name="customername"]');
+    var yearofbirthInput = document.querySelector('.form-update [name="yearofbirth"]');
+    var oldpassInput = document.querySelector('.form-update [name="oldpass"]');
+    var newpassInput = document.querySelector('.form-update [name="newpass"]');
+
+    // Set values to empty strings
+    emailInput.value = "";
+    customernameInput.value = "";
+    yearofbirthInput.value = "";
+    oldpassInput.value = "";
+    newpassInput.value = "";
+
+    // Hide the form and overlay
+    overlay.style.display = "none";
+    formUpdateContainer.style.display = "none";
+}
+   function showNotifications(){
+     var over = document.getElementById("hideTB");
+     var showTB = document.getElementById("thongbao");
+
+     over.style.display = "block";
+     showTB.style.display = "block";
+   }
+   function hideNotifications(){
+    var over = document.getElementById("hideTB");
+    var hideTB = document.getElementById("thongbao");
+
+    over.style.display = "none";
+    hideTB.style.display="none";
+   }
+        function showUpdateForm() {
+    // Ẩn đi các trường nhập dữ liệu cũ (nếu có)
+    resetUpdateForm();
+    var overlay = document.getElementById("overlayout");
+    var updateFormContainer = document.getElementById("update-form-container");
+    overlay.style.display = "block"; // Hiển thị overlay
+    updateFormContainer.style.display = "block"; // Hiển thị update-form-container
+                         }
+function hideUpdateForm() {
+     // Ẩn đi các trường nhập dữ liệu cũ (nếu có)
+     resetUpdateForm();
+    var overlay = document.getElementById("overlayout");
+    var updateFormContainer = document.getElementById("update-form-container");
+    overlay.style.display = "none"; // Ẩn đi overlay
+    updateFormContainer.style.display = "none"; // Ẩn đi update-form-container
+}
+
+    function changeText(obj) {
+   // Lấy ra giá trị của phần tử được click
+   var selectedCategory = obj.innerText;
+
+// Cập nhật nội dung của Thể loại
+var formContainerTheloai = document.querySelector('.form-container-theloai-Tieude');
+formContainerTheloai.firstChild.nodeValue = "Thể loại: " + selectedCategory;
+
+    }
+    
+    </script>
+      <script>
+        document.addEventListener("click", function(event) {
+          if (event.target.classList.contains("Lay_thong_tin")) {
+            thuc_hien(event.target); // Pass the clicked element to the function
+          }
+        });
+        
+        function thuc_hien(clickedElement) {
+          // Retrieve and process information from the clicked element
+          var id = parseInt(clickedElement.id); // Get ID using parseInt()
+          console.log("Clicked element ID:", id);
+          // Perform any necessary actions based on the element's information
+          var xhttp = new XMLHttpRequest();
+            xhttp.onreadystatechange = function() {
+                if (this.readyState == 4 && this.status == 200) {
+                    var response = JSON.parse(this.responseText);
+                    window.location.href = response.redirectUrl + "?id=" + id;
+                }
+            };
+            xhttp.open("POST", "/Home/bai_dang", true);
+            xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+            xhttp.send("Ma_bai_viet=" + id);
+        }
+             function formTimKiemList(){
+                        // ẩn "mọi người cũng tìm kiếm"
+                        var moinguoicxtimkiem = document.querySelector('.lichsutimkiem p');
+                        moinguoicxtimkiem.style.display='none';
+                        // Lấy phần tử ul
+                        var ul = document.querySelector('.lichsutimkiem-list');
+                        
+                        // Xóa tất cả các thẻ li hiện có trong ul(reset lại phần đề xuất tìm kiếm)
+                        ul.innerHTML = '';
+                        var formContainerTheloai2 = document.querySelector('.form-container-theloai-Timkiem');
+                        formContainerTheloai2.firstChild.nodeValue = "Thể loại";
+                        var openTimKiem=document.querySelector('.input-group-list');
+                        if(openTimKiem.style.display === 'none'){
+                            openTimKiem.style.display= 'flex';
+                        }
+                        else {
+                            openTimKiem.style.display = 'none';
+                        }
+                    }
+                    
+         function formtheloai(a){
+                    if(a==1){
+                        var openFormtheloai=document.querySelector('.form-container-theloai_list1');
+                    }
+                    else{
+                        var openFormtheloai=document.querySelector('.form-container-theloai_list2');
+                    }
+                    
+                    if(openFormtheloai.style.display === 'none'){
+                        openFormtheloai.style.display= 'flex';
+                    }
+                    else {
+                        openFormtheloai.style.display = 'none';
+                    }
+                }
+         function changeText(clickedElement) {
+                // Lấy nội dung của div được click
+                var newText = "Thể loại : " + clickedElement.textContent;
+        
+                // Kiểm tra xem thay đổi được thực hiện từ thanh tìm kiếm hay không
+                var formContainerTheloai = document.querySelector('.form-container-theloai-Timkiem');
+                if (formContainerTheloai.contains(clickedElement)) {
+                    // Nếu thay đổi được thực hiện từ thanh tìm kiếm, thì chỉ cập nhật nội dung của thanh tìm kiếm
+                    formContainerTheloai.firstChild.nodeValue = newText;
+                    // ẩn thể loại trong tìm kiếm
+                    var openFormtheloai=document.querySelector('.form-container-theloai_list2');
+                    openFormtheloai.style.display = 'none';
+                    
+                } else {
+                    // Nếu thay đổi được thực hiện từ form đăng bài, thì cập nhật cả hai nơi
+                    var formContainerTheloaiTieude = document.querySelector('.form-container-theloai-Tieude');
+                    formContainerTheloaiTieude.firstChild.nodeValue = newText;
+                    formContainerTheloai.firstChild.nodeValue = newText;
+                }
+            }
+            </script>
+
+</body>
+</html>

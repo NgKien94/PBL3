@@ -1,0 +1,353 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+*{
+    font-family: 'Times New Roman', Times, serif;
+    box-sizing: border-box;
+}
+
+::-webkit-scrollbar {
+    width: 7px;
+    height: 9px;
+}
+
+::-webkit-scrollbar-track {
+    background: white;
+}
+
+::-webkit-scrollbar-thumb {
+    background: radial-gradient(circle,rgb(2, 23, 27), rgb(7, 74, 95));
+    border-radius: 6px;
+}
+
+
+
+html,body{
+  background-color: white;
+  background-repeat: repeat; 
+  height: 100vh;
+  
+}
+
+.heading{
+    width: 100%;
+    height: 75px;
+    background-color: rgb(14, 15, 16);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    color:white;
+    margin-bottom: 10px;
+    box-shadow: 1px 3px 10px 1px rgb(41, 40, 40);
+    margin-bottom: 15px;
+}
+.heading h1{
+    margin: auto 0;
+    
+    font-weight: 900;
+    font-size: 60px;
+    background-image: url(https://phunugioi.com/wp-content/uploads/2020/02/hinh-anh-dep-thien-nhien.jpg);
+    background-size: contain;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color:transparent;
+  
+}
+.heading-icon{
+    margin: auto 0;
+    width: 150px;
+    height: 60px;
+    object-fit: contain;
+}
+
+
+.heading-button{
+    
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    border: none;
+    transition: opacity 0.5s linear;
+    gap:50px;
+    
+}
+
+.button-dangnhap ,.button-dangki{
+    --active: 0;
+    background: transparent;
+    font-size: 14px;
+    font-weight: 800;
+    border: 0;
+    cursor: pointer;
+    width: 120px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4px;
+    position: relative;
+    border: none;
+    
+   box-shadow: 0 0 6px 1px white;
+}
+
+
+.button-dangnhap:hover, .button-dangki:hover{
+    border: none;
+    box-shadow: 0 0 20px 5px whitesmoke;
+           
+    background : white;
+    transform: scale(calc(1 + (var(--active) * 0.1)));
+    
+    transition: all 0.35s ease-out;
+}
+.button-dangnhap:active ,.button-dangki:active{
+    transform: scale(1);
+    transition: .3s;
+}
+.sparkle {
+    width: 1.5em;
+    height: 20px;    
+}
+.sparkle path {
+    color: rgb(21, 201, 233);
+    transform-box: fill-box;
+    transform-origin: center;
+    fill: currentColor;
+    stroke: currentColor;
+    animation: bounce 1s linear 0.25s infinite alternate both;
+}
+.button-dangki:is(:hover, :focus-visible) path,.button-dangnhap:is(:hover, :focus-visible) path {
+    animation-name: bounce;
+}
+@keyframes bounce {
+    35%, 65% {
+        transform: scale(var(--scale));
+    }
+}
+.sparkle path:nth-of-type(1) {
+    --scale: 0.5;
+    --delay: 0.1;
+    --base: 40%;
+  }
+  
+  .sparkle path:nth-of-type(2) {
+    --scale: 1.5;
+    --delay: 0.2;
+    --base: 20%;
+  }
+  
+  .sparkle path:nth-of-type(3) {
+    --scale: 2.5;
+    --delay: 0.35;
+    --base: 30%;
+  }
+
+
+.button-dangnhap:is(:hover, :focus-visible) {
+    --active: 1;
+    --play-state: running;
+}
+
+.text {
+    translate: 2% -6%;
+    letter-spacing: 0.01ch;  
+   color: rgb(21, 201, 233);
+}
+.theme{
+    background-color: white;
+    margin-top: 20px;
+    width: 100%;
+    height: 300px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.theme-item1{
+    margin-left: 50px;
+     width: 200px;
+     height: 200px;
+    
+     background-image: url(https://vapa.vn/wp-content/uploads/2022/12/hinh-anh-con-nguoi-dep-001.jpg);
+     background-size: contain;
+     background-repeat: no-repeat;
+}
+.theme-item2{
+    width: 200px;
+    height:200px;
+    background-image: url(https://cdn.alongwalk.info/info/wp-content/uploads/2022/12/01071921/image-top-100-hinh-anh-trai-dep-giau-mat-cute-cool-ngau-lanh-lung-5c044bd0988a3099471ed585ed37a5d4.jpg);
+    background-size: 133px 200px;
+    background-repeat: no-repeat;
+}
+.theme-item3{
+    width: 200px;
+    height:200px;
+    background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT2EJI9W2Bvm4qFBG5zBcYla7pMdTUVWIxa0GNfiVYitlQhpVPT0poygyvetidP2WRZ-ao&usqp=CAU);
+    background-size: 133px 200px;
+    background-repeat: no-repeat;
+} 
+.theme-item4{
+    width: 200px;
+    height:200px;
+    background-image: url(https://kenh14cdn.com/2020/6/14/8211054525792258890678129175297256729870336o-15921327948531844554283.jpg);
+    background-size: 133px 200px;
+    background-repeat: no-repeat;
+}
+
+.theme-item5{
+    width: 200px;
+    height:200px;
+    background-image: url(https://khoinguonsangtao.vn/wp-content/uploads/2022/09/hinh-anh-gai-xinh-viet-nam.jpg);
+    background-size: 133px 200px;
+    background-repeat: no-repeat;
+}
+.theme-item6{
+    width: 200px;
+    height:200px;
+    background-image: url(https://xwatch.vn/upload_images/images/2023/01/17/noo-phuoc-thinh.jpg);
+    background-size: 133px 200px;
+    background-repeat: no-repeat;
+}
+.theme-item7{
+    width: 200px;
+    height:200px;
+    background-image: url(https://haycafe.vn/wp-content/uploads/2022/03/Anh-gai-xinh-de-thuong-rang-khenh.jpg);
+    background-size: 133px 200px;
+    background-repeat: no-repeat;
+}
+
+.About-Website{
+    margin-top: 20px;
+
+  height: 450px;
+  position: relative;
+}
+.About-Website .container{
+    
+    position: absolute;
+    top : 50px;
+    left: 10%;
+    width: 900px;
+    height: 350px;
+   
+    display: flex;
+    gap:20px;
+    background-color: white;
+    padding: 20px;
+   
+ 
+    box-shadow: 2px 2px 20px 4px rgb(6, 34, 39);
+    
+}
+.explain{
+    width: 100%;
+  
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    font-family: Arial, Helvetica, sans-serif;
+    gap: 30px;
+}
+.explain p {
+    height: 50px;
+    font-size: 18px;
+    font-weight: 700;
+    font-family: "Noto Sans", sans-serif;
+}
+.About-icon{
+   display: flex;
+  
+   justify-content: space-around;
+   height: 120px;
+   align-items: center;
+}
+.feature{
+    margin-top: 100px;
+    height:450px;
+   
+    position: relative;
+}
+.feature .container{
+    padding: 20px;
+    position: absolute;
+    width: 70%;
+    top :40px;
+    
+    right: 5%;
+    height: 85%;
+    background-color: rgb(250, 250, 250);
+    display: flex;
+    justify-content: space-evenly;
+    gap: 5px;
+    box-shadow: 2px 2px 20px 4px rgb(6, 34, 39);
+}
+.Feature-App h2{
+    font-weight: 800;
+}
+.Feature-App h2,p{
+    font-family: "Noto Sans", sans-serif;
+}
+.Reason{
+    margin-top: 25px;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+   
+}
+.Reason-Content h5 i{
+    margin-right: 20px;
+}
+.Reason-Content h5{
+    margin-top: 15px;
+    font-weight: 800;
+}
+.feature .container {
+    transform: translateX(-250px);  /* Dịch chuyển từ trái */
+    opacity: 0;
+    transition: transform 1s ease-out, opacity 1s ease-out;
+}
+.About-Website {
+    opacity: 0;
+    transform: scale(0.5);
+    transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+.About-Website.visible {
+    opacity: 1;
+    transform: scale(1);
+}
+
+.Reason .Reason-Content {
+    transform: translateX(250px);  /* Dịch chuyển từ phải */
+    opacity: 0;
+    transition: transform 1s ease-out, opacity 1s ease-out;
+}
+
+.feature .container.visible,
+.Reason .Reason-Content.visible {
+    transform: translateX(0);
+    opacity: 1;
+}
+footer{
+    height: 200px;
+    background-color: rgba(0, 0, 0, 0.877);
+    color: white;
+    display: flex;
+    justify-content: space-evenly;
+}
+.footer-Part1 ,.footer-Part2 ,.footer-Part3{
+    width: 300px;
+    margin:25px 0;
+   
+}
+
+.Application{
+    height: 50px;
+    background-color: rgba(0, 0, 0, 0.877);
+    display: flex;
+    justify-content: center;
+    color: white;
+    gap : 20px;
+}
+        

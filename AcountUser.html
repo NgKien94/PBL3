@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quản lý tài khoản</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Pattaya&family=Zeyada&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./asset/css/AccountStyle.css">
+ <style>
+   
+ </style>
+  </head>
+<body>
+    <div class="navbar" style="background-color: rgba(9, 73, 77, 0.877); width: 100%;height: 80px;">
+     <img src="./asset/image/Logo.png" alt="Icon ứng dụng" onclick="window.location.href='/Home/LogIn'" style="width: 150px; height: 60px; object-fit: contain; margin: 5px 20px 5px ; border-radius: 40px;">
+     <h1>Account Management</h1>
+    </div>
+    
+    <div class="row">
+
+          <div class="col1">
+                    <button class="update-pictureProfile" onclick="showPicture()"><i class="fa-solid fa-image"></i> Update Picture Profile</button>
+                    <button class="update-Account" onclick="showAccount()"><i class="fa-solid fa-circle-user"></i> Update Information</button>
+                    <button class="help" onclick="showHelp()" ><i class="fa-solid fa-circle-question"></i> Help</button>
+          </div>
+
+        <div class="col2">
+
+                <div id="update-form-container" > <!--Mở đầu update-form-container-->
+                  
+                  <div id="update-Picture" class="update-Picture" style="display: none;">
+                      <img src="https://cdn-media.sforum.vn/storage/app/media/THANHAN/2/2a/avatar-dep-89.jpg" alt="Avatar Picture" style="width: 350px; height: 350px; border-radius: 200px; object-fit: cover; transform: translateX(40%);">
+                  <form method="post" class="form-update" enctype="multipart/form-data" asp-action="UpdateAvatar" >
+                  <div class="form-group">
+                              <label for="exampleFormControlFile1" >Choose file to update picture profile: </label>
+                              <input name="files" accept="image/*" type="file"  class="form-control-file" >
+                    </div>
+                    <button type="submit" style="min-width: 100px; height: 50px; background-color: rgb(218, 13, 64); border: none;border-radius: 4px;color: white; font-size: 15px; font-weight: 800;padding: 10px; margin-top: 10px;">Confirm to update</button>
+                  </form>
+
+                </div> <!--Update Picture profile-->
+
+
+                <div  id="update-Profile" style="display: none;" class="update-Profile"> <!--Mở đầu update-Profile-->
+
+                  <form method="post" class="form-update" enctype="multipart/form-data" asp-action="UpdateProfile">
+                      
+
+                      <div class="form-group">
+                        <label for="email"> Email mới:</label>
+                        <input class="form-control" type="email" name="email"  style="width: 400px; height: 40px; " id="email">
+                    </div>
+
+                    
+
+                      <div class="form-group">
+                        <label for="customername">Tên đăng nhập mới:</label>
+                        <input class="form-control" name="customername" style="width: 400px; height: 40px; " type="text"  value="" required>
+                    </div>
+
+                      
+
+                      <div class="form-group">
+                        <label for="yearofbirth">Năm sinh mới:</label>
+                        <input class="form-control" type="date" name="yearofbirth" style="width: 400px; height: 40px; " max=""  value="" required>
+                    </div>
+
+                      <div class="form-group">
+                          <label for="oldpass">Mật khẩu cũ: </label>
+                          <input class="form-control" name="oldpass" style="width: 400px; height: 40px;" type="password"  value="" required>
+                      </div>
+
+                      <div class="form-group">
+                          <label for="pass">Mật khẩu mới:</label>
+                          <input class="form-control" name="pass" style="width: 400px; height: 40px; " type="password"  value="" required>
+                      </div>
+                
+                      <button type="submit" onclick=check(event) style="min-width: 100px; height: 40px; background-color: rgb(218, 13, 64); border: none;border-radius: 4px;color: white; font-size: 15px; font-weight: 800;padding: 10px; margin-top: 10px;" >CONFIRM</button>
+                  </form>
+
+                  </div> <!-- id update information -->
+
+              </div>  <!--Id update form container-->
+
+                  <div class="container-Help"  id="container-Help">
+                    <p><strong>Update Picture Profile:</strong> Click this button to change your profile picture. You can upload a new image to use as your profile picture. Simply click on the button, select the image file you want to upload, and then click the "Confirm to update" button to save your new profile picture.</p>
+                    <p><strong>Update Information:</strong> Click this button to update your personal information. You can update your email address, username, birth year, and password. Fill in the required information in the form fields provided, and then click the "CONFIRM" button to save your changes.</p>
+                    <p><strong>Need assistance?</strong> If you need any assistance or have any questions, please don't hesitate to contact our support team. You can reach us via email at <a href="mailto:support@example.com">support@example.com</a>. Our support team is available to help you with any issues or queries you may have regarding your account.</p>
+                    <p><strong>For urgent issues:</strong> If you have any urgent issues that require immediate attention, please call us at <a href="tel:+1234567890">+1 234 567 890</a>. Our customer service representatives are available 24/7 to assist you with any urgent matters.</p>
+                  </div> <!--container Help-->
+         </div> <!--Col2-->
+
+    </div> <!--row-->
+
+    <script >
+        function showHelp(){
+    var help= document.getElementById("container-Help");
+    var information = document.getElementById("update-Profile");
+    var picture = document.getElementById("update-Picture");
+ 
+    help.style.display="block";
+    information.style.display="none";
+    picture.style.display="none";
+}
+
+function showAccount(){
+    var help= document.getElementById("container-Help");
+    var information = document.getElementById("update-Profile");
+    var picture = document.getElementById("update-Picture");
+
+    reset(); // Thêm hàm reset ở đây
+
+    help.style.display="none";
+    information.style.display="block";
+    picture.style.display="none";
+}
+
+function reset() {
+    document.querySelector('input[name="email"]').value = "";
+    document.querySelector('input[name="customername"]').value = "";
+    document.querySelector('input[name="yearofbirth"]').value = "";
+    document.querySelector('input[name="oldpass"]').value = "";
+    document.querySelector('input[name="pass"]').value = "";
+}
+
+function showPicture(){
+    reset();
+    var help= document.getElementById("container-Help");
+    var information = document.getElementById("update-Profile");
+    var picture = document.getElementById("update-Picture");
+
+    help.style.display="none";
+    information.style.display="none";
+    picture.style.display="block";
+}
+
+document.addEventListener('DOMContentLoaded', (event) => {
+    var today = new Date().toISOString().split('T')[0];
+    document.getElementsByName("yearofbirth")[0].setAttribute("max", today);
+    });
+    function check(event) {
+        event.preventDefault();
+        var xhttp = new XMLHttpRequest();
+        xhttp.onreadystatechange = function() {
+            if (this.readyState == 4 && this.status == 200) {
+                var response = JSON.parse(this.responseText);
+                window.location.href = response.redirectUrl;
+                alert('Thành Công');
+            }
+        };
+        xhttp.open("POST", "/Home/update", true);
+        xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+        var oldpass = document.getElementsByName('oldpass')[0].value;
+         var Name = document.getElementsByName('customername')[0].value;
+          var password = document.getElementsByName('pass')[0].value;
+           var birth = document.getElementsByName('yearofbirth')[0].value;
+            var email = document.getElementsByName('email')[0].value;
+       if (oldpass === '' || Name === '' || password === '' || birth === '' || email === '') {
+            alert('Chưa điền đầy đủ thông tin');
+            return false;
+        }
+        if (oldpass == '@Model.password') {
+            xhttp.send("Name=" + Name + "&email=" + email + "&birth=" + birth + "&password=" + password);
+        } else {
+            alert('Fail');
+            return false;
+        }
+        
+    }
+    
+    </script>
+</body>
+</html>

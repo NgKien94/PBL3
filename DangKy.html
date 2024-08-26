@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./asset/css/dangky.css">
+    <title>Dang Ky</title>
+</head>
+<body>
+    <div class="container">
+        <div class="form_area">
+            <p class="title">Sign up</p>
+            <form method="post" class="m-2 p-3 bg-light" enctype="multipart/form-data">
+                <!--Tên đăng nhập-->
+                <div class="form_group">
+                    <label class="sub_title" for="customername">Tên đăng nhập:</label>
+                    <input placeholder="Enter your full name" class="form_style" type="text" name="customername" required>
+                </div>
+                <!--Email đăng ký-->
+                <div class="form_group">
+                    <label class="sub_title" for="email">Email</label>
+                    <input placeholder="Enter your email" id="email" class="form_style" type="email" name="email" required>
+                </div>
+                <!--Năm sinh-->
+                <div class="form_group">
+                    <label class="sub_title" for="yearofbirth">Ngày sinh</label>
+                   <!--Lấy năm sinh => edit-->
+                   <input class="form_style" placeholder="Year of birth" type="date" name="yearofbirth" id="yearofbirth" value="" required />
+
+                </div>
+                <!--Mật khẩu đăng ký-->
+                <div class="form_group">
+                    <label class="sub_title" for="pass">Password</label>
+                    <input placeholder="Enter your password" id="password" class="form_style" type="password" name="pass" required>
+                </div>
+                <!--Submit dữ liệu-->
+                <div>
+                   
+                    <div class="form-group">
+                        <button  class="btn" onclick="sendData()">CONFIRM</button>
+                    </div>
+          
+                    <p class="advise">Have an Account? 
+               <!--href gắn trang đăng nhập--> <a class="link" href="https://www.facebook.com/">Login Here!</a>
+                    </p>
+                </div>
+        </form>
+        <script>
+            function sendData() {
+                var xhttp = new XMLHttpRequest();
+                xhttp.onreadystatechange = function() {
+                    if (this.readyState == 4 && this.status == 200) {
+                        var response = JSON.parse(this.responseText);
+                        if (response.success) {
+                            window.location.href = response.redirectUrl;
+                        } else {
+                            window.location.href = response.redirectUrl;
+                        }
+                    }
+                };
+                xhttp.open("POST", "/Home/SecondMiddleware", true);
+                xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+                var name = document.getElementsByName("customername")[0].value;
+                var email = document.getElementsByName("email")[0].value;
+                var birth = parseInt(document.getElementsByName("yearofbirth")[0].value);
+                var password = document.getElementsByName("pass")[0].value;
+                xhttp.send("Name=" + name + "&email=" + email + "&birth=" + birth + "&password=" + password);
+            }
+      </script>            
+    </div>
+</div>
+</body>
+</html>

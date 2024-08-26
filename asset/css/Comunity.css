@@ -1,0 +1,327 @@
+body{
+    width: 100%;
+    margin-top:20px;
+    background:#DCDCDC;
+    font-family: 'Times New Roman', Times, serif;
+    box-sizing: border-box;
+    padding: 0;
+    
+}
+/*profile page*/
+button{
+    border:none;
+    font-weight: 800;
+}
+.navbar{
+    width: 100%;
+    height: 50px;
+    background-color: transparent;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+ 
+}
+.search input[type="search"] {
+    width: 650px; 
+    height: 40px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+   
+}
+.navbar input:focus{
+    outline: none;
+    border: 1px solid rgb(8, 218, 233);
+    box-shadow: 0 0 3px 0 rgb(8, 218, 233);
+}
+.nav{
+    display: flex;
+    flex-direction: column;
+
+}
+
+.nav button{
+   min-width: 130px;
+    height: 40px;
+   
+    margin-bottom: 20px;
+    background-color: rgb(51, 49, 49);
+    color: white;
+    border-radius: 10px;
+}
+
+.nav li i{
+    font-size: 18px;
+}
+.post, .notifications , .update-infomation, .about-us ,.help ,.logout{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 15px;
+    font-family: "Pattaya", sans-serif;
+}
+.nav button:hover{
+    color:white;
+    background-color: rgb(240, 13, 70);
+    border-radius: 0px;
+    box-shadow: 3px 3px 4px 2px rgb(172, 68, 94);
+    transition: background-color 0.3s ease-in-out, border-radius 0.5s ease-in-out, box-shadow 0.35s ease-in-out;
+}
+
+
+.right-profile-card i {
+    font-size: 15px;
+    margin-right: 10px;
+}
+.right-profile-card .card-body{
+    width: 100%;
+    
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.form-control{
+    border: 2px solid white;
+    border-radius: 0;
+}
+.form-control:focus{
+    
+    outline: unset;
+    box-shadow: unset;
+    border:none;
+    border: 2px solid white;
+}
+.card-block{
+    margin-top: 30px;
+    width: 250px;
+    height: 260px;
+    display: flex;
+    flex-direction: column;
+    font-family: "Roboto", "Arial", sans-serif;
+    /* border: 1px solid #999;
+    border-radius: 15px; */
+    
+}
+.card-block:hover{
+    cursor: pointer;
+
+    /* border: 2px solid rgb(22, 216, 190); */
+    box-shadow: 3px 3px 10px 5px rgb(10, 211, 218);
+    background-color: rgb(204, 238, 236);
+    transition: box-shadow 0.3s  ease-out, background-color 0.35s linear;
+}
+.card-block img{
+    border-radius: 10px;
+}
+.card-block:hover img {
+    border-radius: 0px;
+    transition:  border-radius 0.25s linear ;
+}
+.card-details{
+    margin-top: 5px;
+    width: 100%;
+    height: 30%;
+   
+    display: flex;
+    justify-content: space-around;
+}
+.about{
+    
+    display: flex;
+    flex-direction: column;
+}
+.about .description{
+    font-weight: 900;
+}
+.other{
+    display: flex;
+    justify-content: flex-start;
+    gap: 10px;
+}
+.other i{
+    margin-left: 5px;
+}
+
+
+.form-status{
+    margin-top: 40px;
+    width: 90%;
+    height: 500px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+}
+.btn-primary{
+    margin-top: 40px;
+}
+.form-group-tieude{
+    position: relative;
+}
+.form-container-theloai{
+    position: absolute;
+    right: 0;
+    top: 0;
+    cursor: pointer;
+}
+
+.form-container-theloai:hover i{
+    color: black;
+}
+.form-container-theloai i{
+    margin-left: 8px;
+    color: #7b7878;
+}
+.form-container-theloai_list {
+    display: none;
+    background-color: white;
+    padding-left: 5px;
+    border: 1px solid black ;
+    border-radius: 5px;
+    color: #7b7878;
+    flex-direction: column;
+    justify-content: center;
+}
+.form-container-theloai_list div:hover {
+    color: black;
+}
+.overlay ,.overlayout ,.hideTB ,.overDevelop ,.giup{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8); /* Màu nền và độ mờ */
+    z-index: 999; /* Đảm bảo nó ở trên tất cả các phần tử khác */
+    display: none; /* Ẩn mặc định */
+}
+
+.form-container  {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 60%;
+    background-color: #fff; /* Màu nền của form */
+    padding: 20px;
+    border-radius: 5px;
+    z-index: 1000; /* Đảm bảo form ở trên overlay */
+    display: none; /* Ban đầu ẩn form */
+}
+
+#update-form-container {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 60%;
+    background-color: #fff; /* Màu nền của form */
+    padding: 20px;
+    border-radius: 5px;
+    z-index: 1000; /* Đảm bảo form ở trên overlay */
+    display: none; /* Ban đầu ẩn form */
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5); /* Đổ bóng cho form */
+}
+.form-update{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+   height: 500px;
+  
+}
+/*
+Thông báo 
+*/
+/* .thongbao{
+    width: 80%;
+    height: 600px;
+    background-color: red;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 40px;
+    border-radius: 10px;
+    overflow-y: auto;
+} */
+.thongbao {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 60%;
+    height: 80%;
+    background-color: rgb(153, 212, 212); /* Màu nền của form */
+    padding: 20px;
+    border-radius: 5px;
+    z-index: 1000; /* Đảm bảo form ở trên overlay */
+    justify-content: center;
+    overflow-y: auto;
+    font-family: "Pattaya", sans-serif;
+}
+
+.wrapper{
+    margin-bottom: 20px;
+    width: 100%;
+    height: 90px;
+    background-color: white;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    padding: 5px 20px;
+    border-radius: 5px;
+    border: 2px solid #eee;
+}
+.admin{
+    width: 100%;
+    height: 40px;
+    display: flex;
+}
+.name-admin{
+    font-weight: 800;
+    font-size: 18px;
+    margin-left: 20px;
+}
+.thongbao-about{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+    color: rgb(70, 68, 68);
+}
+
+.DevelopTeam ,.Giupdo{
+
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 60%;
+    height: 400px;
+    background-color: #fff; /* Màu nền của form */
+    padding: 20px;
+    border-radius: 5px;
+    z-index: 1000; /* Đảm bảo form ở trên overlay */  
+    
+    background-color: rgb(240, 13, 70);
+    color: white;
+    overflow-y: auto;
+}
+.DevelopTeam p{
+    margin: 20px 20px;
+    line-height: 1.8;
+    font-family: "Pattaya", sans-serif;
+}
+.DevelopTeam h3, h4{
+    font-family: "Pattaya", sans-serif;
+}
+.Giupdo{
+    font-family: "Roboto", "Arial", sans-serif;
+    line-height: 2;
+}
+.Giupdo h3, h4{
+    font-family: "Pattaya", sans-serif;
+}

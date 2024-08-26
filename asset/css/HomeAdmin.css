@@ -1,0 +1,108 @@
+html,body{
+    font-family: 'Times New Roman', Times, serif;
+}
+*::-webkit-scrollbar {
+    width: 6px; /* Webkit Browsers */
+}
+
+
+*::-webkit-scrollbar-thumb {
+    background: radial-gradient(circle, rgb(28, 228, 228), rgb(7, 236, 236), rgb(19, 3, 15));; /* Webkit Browsers */
+    border-top-right-radius: 10px; /* Webkit Browsers */
+    border-bottom-left-radius: 10px;
+}
+
+
+.nav-link {
+position: relative; /* Cần thiết để định vị pseudo-element */
+color: white;
+font-size: 18px;
+text-decoration: none; /* Loại bỏ gạch chân mặc định */
+}
+
+.nav-link:hover {
+color: rgb(236, 9, 104); /* Màu chữ khi hover */
+cursor: pointer;
+}
+
+.nav-link::after {
+content: ''; /* Không có nội dung, chỉ để hiển thị đường gạch chân */
+position: absolute; /* Định vị tương đối với .nav-link */
+left: 50%; /* Bắt đầu từ giữa */
+bottom: -5px; /* Cách nội dung 5px */
+width: 0; /* Ban đầu không hiển thị đường gạch chân */
+height: 5px; /* Độ dày của đường gạch chân */
+background-color: rgb(236, 9, 104); /* Màu của đường gạch chân */
+transform: translateX(-50%); /* Để căn giữa đường gạch chân */
+transition: all 0.3s ease; /* Thời gian và hiệu ứng chuyển đổi */
+}
+
+.nav-link:hover::after {
+width: 100%; /* Hiển thị đường gạch chân khi hover */
+} 
+.nav-item{
+margin-left: 20px;
+}
+
+.theme{
+background-color: white;
+margin-top: 20px;
+width: 100%;
+height: 300px;
+display: flex;
+justify-content: space-evenly;
+align-items: center;
+}
+
+.theme-item1{
+margin-left: 50px;
+width: 200px;
+height: 200px;
+
+background-image: url(https://vapa.vn/wp-content/uploads/2022/12/hinh-anh-con-nguoi-dep-001.jpg);
+background-size: contain;
+background-repeat: no-repeat;
+}
+.theme-item2{
+width: 200px;
+height:200px;
+background-image: url(https://cdn.alongwalk.info/info/wp-content/uploads/2022/12/01071921/image-top-100-hinh-anh-trai-dep-giau-mat-cute-cool-ngau-lanh-lung-5c044bd0988a3099471ed585ed37a5d4.jpg);
+background-size: 133px 200px;
+background-repeat: no-repeat;
+}
+.theme-item3{
+width: 200px;
+height:200px;
+background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT2EJI9W2Bvm4qFBG5zBcYla7pMdTUVWIxa0GNfiVYitlQhpVPT0poygyvetidP2WRZ-ao&usqp=CAU);
+background-size: 133px 200px;
+background-repeat: no-repeat;
+} 
+.theme-item4{
+width: 200px;
+height:200px;
+background-image: url(https://kenh14cdn.com/2020/6/14/8211054525792258890678129175297256729870336o-15921327948531844554283.jpg);
+background-size: 133px 200px;
+background-repeat: no-repeat;
+}
+
+.theme-item5{
+width: 200px;
+height:200px;
+background-image: url(https://khoinguonsangtao.vn/wp-content/uploads/2022/09/hinh-anh-gai-xinh-viet-nam.jpg);
+background-size: 133px 200px;
+background-repeat: no-repeat;
+}
+.theme-item6{
+width: 200px;
+height:200px;
+background-image: url(https://xwatch.vn/upload_images/images/2023/01/17/noo-phuoc-thinh.jpg);
+background-size: 133px 200px;
+background-repeat: no-repeat;
+}
+.theme-item7{
+width: 200px;
+height:200px;
+background-image: url(https://haycafe.vn/wp-content/uploads/2022/03/Anh-gai-xinh-de-thuong-rang-khenh.jpg);
+background-size: 133px 200px;
+background-repeat: no-repeat;
+}

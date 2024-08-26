@@ -1,0 +1,131 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Times New Roman', Times, serif;
+}/*
+.form-input{
+    padding: 0 20px;
+    border: 1px solid #eee;
+    border-radius: 4px;
+    width: 60%;
+    height :50px;
+
+}
+.form-input:focus{
+    border-color: blueviolet;
+}
+.form-field{
+    position: relative;
+}
+.form-label{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 21px;
+    user-select: none;
+    color: #999;
+    transition: 0.25s ease-in-out;
+}
+.form-input:not(:placeholder-shown) + .form-label,
+.form-input:focus + .form-label{
+    top :0px;
+    left: 11px;
+    padding: 10px;
+    background-color: white;
+    color: blueviolet;
+}
+*/
+html,body{
+    width: 100%;
+    height: 100vh;
+    background-image: url(/asset/image/anhdangnhap.jpg);
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container{
+    width: 400px;
+    height: 550px;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 10px;
+    border: 2px solid #264143;;
+    box-shadow: 5px 5px 0 rgb(17, 145, 192);
+}
+.introduction{
+    font-size: 40px;
+    font-weight: 1000;
+}
+.btn{
+    width: 100px;
+    height: 30px;
+    background-color: black;
+    color: #fff;
+    margin-bottom: 25px;
+    border-radius: 8px;
+    font-weight: 800;
+}
+.btn:hover{
+    background-color: rgb(17, 145, 192);
+    color: #fff;
+    cursor: pointer;
+}
+input{
+    width: 300px;
+    height: 35px;
+    font-size: 15px;
+    border-radius: 4px;
+    font-size: 17px;
+}
+.form-group{
+    margin-top: 20px;
+    position: relative;
+    
+}
+.form-input{
+   padding: 20px;
+   
+}
+.form-label{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 21px;
+    user-select: none;
+    color: #999;
+    pointer-events: none;
+    transition: 0.35s ease;
+
+}
+
+.form-input:not(:placeholder-shown) +.form-label,
+.form-input:focus +.form-label{
+    top :0;
+    background-color: white;
+    padding:0 10px;
+    color:rgb(17, 145, 192);
+    left : 11px;
+    
+}
+
+i{
+    position: absolute;
+    top : 50%;
+    left: 280px;
+    transform: translateY(-50%) ;
+    
+    pointer-events: none;
+}
+a{ 
+    font-weight: 900;
+  color: rgb(17, 145, 192);
+   text-decoration: none;
+}
+.advise{
+   font-size: 18px;
+}

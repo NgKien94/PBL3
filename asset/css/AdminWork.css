@@ -1,0 +1,196 @@
+*{
+    font-family: 'Times New Roman', Times, serif;
+    box-sizing: border-box;
+}
+
+::-webkit-scrollbar {
+    width: 7px;
+    height: 9px;
+}
+
+::-webkit-scrollbar-track {
+    background: white;
+}
+
+::-webkit-scrollbar-thumb {
+    background: radial-gradient(circle,rgb(2, 23, 27), rgb(7, 74, 95));
+    border-radius: 6px;
+}
+
+        html,body{
+            font-family: 'Montserrat', serif;
+        }
+        ul{
+            list-style-type: none;
+        }
+        
+        .nav-item button{
+            width: 150px;
+            height: 45px;
+            color: white;
+            background-color: rgb(24, 216, 206);
+            border: none;
+            margin-left: 25px;
+            margin-right: 25px;
+            border-radius: 5px;
+            font-weight: 800;
+        }
+        .nav-item button:hover{
+           
+            background-color: rgb(223, 14, 66);
+            transition: all 0.45s ease-out;
+        }
+        .personal-info button{
+           border: none;
+            margin: 0 auto;
+            min-width: 120px;
+            margin-right: 15px;
+            margin-left: 10px;
+            height: 40px;
+            font-weight: 800;
+        }
+        .form-control:focus{
+            border: 1px solid #eee;
+            box-shadow: 2px 2px 3px 2px rgb(8, 192, 224);
+            transition: all 0.25s linear;
+        }
+    
+        .personal-info button i{
+            margin: 0 5px;
+        }
+        .personal-list i {
+            margin: 0 15px;
+        }
+            .box50{
+            width: 40px;
+            height: 40px;
+            text-align: center;
+            line-height: 40px;
+            display: inline-block;
+        }
+        .myfooter ul{
+            list-style: none;
+            margin: 0px;
+            padding: 0px;
+
+        }
+        .myfooter ul>li>a{
+            text-decoration: none;
+            color: rgb(0,0,0);
+        }
+        .overlay ,.overlayout ,.overlayouts,.hideTB ,.giup{
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8); /* Màu nền và độ mờ */
+            z-index: 999; /* Đảm bảo nó ở trên tất cả các phần tử khác */
+            display: none; /* Ẩn mặc định */
+        }
+
+        .form-container  {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 60%;
+            background-color: #fff; /* Màu nền của form */
+            padding: 20px;
+            border-radius: 5px;
+            z-index: 1000; /* Đảm bảo form ở trên overlay */
+            display: none; /* Ban đầu ẩn form */
+        }
+
+        #update-form-container {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 60%;
+            background-color: #fff; /* Màu nền của form */
+            padding: 20px;
+            border-radius: 5px;
+            z-index: 1000; /* Đảm bảo form ở trên overlay */
+            display: none; /* Ban đầu ẩn form */
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5); /* Đổ bóng cho form */
+        }
+        #update-form-containers{
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 60%;
+            background-color: #fff; /* Màu nền của form */
+            padding: 20px;
+            border-radius: 5px;
+            z-index: 1000; /* Đảm bảo form ở trên overlay */
+            display: none; /* Ban đầu ẩn form */
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5); /* Đổ bóng cho form */
+        }
+        .form-update{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 80%;
+            height: 500px;
+        
+        }
+        .thongbao {
+            background-color: rgb(153, 212, 212); /* Màu nền của form */
+            padding: 20px;
+            border-radius: 5px;
+            justify-content: center;
+            overflow-y: auto;
+            font-family: "Pattaya", sans-serif;
+        }
+
+        .wrapper{
+            margin-bottom: 20px;
+            width: 100%;
+            height: 90px;
+            background-color: white;
+            display: flex;
+            align-items: flex-start;
+            flex-direction: column;
+            padding: 5px 20px;
+            border-radius: 5px;
+            border: 2px solid #eee;
+        }
+        .admin{
+            width: 100%;
+            height: 40px;
+            display: flex;
+        }
+        .name-admin{
+            font-weight: 800;
+            font-size: 18px;
+            margin-left: 20px;
+        }
+        .thongbao-about{
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            font-size: 14px;
+            color: rgb(70, 68, 68);
+        }
+        footer{
+            height: 200px;
+            background-color: rgba(0, 0, 0, 0.877);
+            color: white;
+            display: flex;
+            justify-content: space-evenly;
+        }
+        .footer-Part1 ,.footer-Part2 ,.footer-Part3{
+            width: 300px;
+            margin:25px 0;
+           
+        }.Application{
+            height: 50px;
+            background-color: rgba(0, 0, 0, 0.877);
+            display: flex;
+            justify-content: center;
+            color: white;
+            gap : 20px;
+        }            

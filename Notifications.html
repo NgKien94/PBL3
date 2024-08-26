@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notifications</title>
+    <link rel="stylesheet" href="styleNotifications.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Pattaya&family=Zeyada&display=swap" rel="stylesheet">
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Pattaya", sans-serif;
+        }
+        .container{
+            background-color: white;
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .navbar{
+            width: 100%;
+            height: 100px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 50px;
+        }
+        .navbar button{
+            background-color: black;
+            color: white;
+            font-size: 18px;
+            width: 150px;
+            height: 50px;
+            cursor: pointer;
+            border-radius: 8px;
+            border: none;
+        }
+        .navbar button:hover{
+            color: white;
+            background-color: rgb(240, 13, 70);
+            border-radius: 0px;
+            box-shadow: 3px 3px 4px 2px rgb(172, 68, 94);
+            transition: background-color 0.3s ease-in-out, border-radius 0.5s ease-in-out, box-shadow 0.35s ease-in-out;
+        }
+        .navbar i{
+            margin-left: 10px;
+            font-size: 20px;
+        }
+        .Notifications{
+            border-radius: 10px;
+            height: 450px;
+            width: 55%;
+            background-image: linear-gradient(90deg, rgb(238, 8, 66), rgb(10, 226, 241));
+            padding: 10px;
+        }
+        .Notifications-Post, .Notifications-System, .Notifications-User{
+            height: 100%;
+            width: 100%;
+            overflow-y: auto;
+        }
+        .Post-Wrapper, .System-Wrapper, .User-Wrapper{
+            height: 80px;
+            width: 100%;
+            display: flex;
+            justify-content: space-evenly;
+            margin-bottom: 10px;
+            cursor: pointer;
+        }
+        .Post-Wrapper img, .System-Wrapper img, .User-Wrapper img{
+            width: 40px; height: 40px; object-fit: cover; border-radius: 25px; background-color: transparent;
+        }
+        .Post-contentNotifications, .System-contentNotifications, .User-contentNotifications {
+            height: 100%;
+            width: 70%;
+            display: flex;
+            flex-direction: column;
+        }
+        .Post-descriptions, .System-descriptions, .User-descriptions{
+            display: flex;
+            flex-direction: column;
+        }
+        .Post-name, .System-name, .User-name{
+            font-weight: 900;
+            font-size: 15px;
+        }
+        .Post-dateNotifications, .System-dateNotifications, .User-dateNotifications{
+            margin-top: 5px;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2 style="margin: 10px auto 5px;">Notifications</h2>
+        <div class="navbar">
+            <button onclick="showPost()" id="btnPost" style="background-color: rgb(240, 13, 70);">Post <i class="fa-solid fa-signs-post"></i></button>
+            <button onclick="showSystem()" id="btnSystem">System <i class="fa-solid fa-robot"></i></button>
+            <button onclick="showUser()" id="btnUser">User <i class="fa-solid fa-image-portrait"></i></button>
+        </div>
+        <hr>
+        <div class="Notifications">
+            <div class="Notifications-Post" id="Notifications-Post">
+                <div class="Post-Wrapper">
+                    <img src="https://via.placeholder.com/40" alt="Post Image">
+                    <div class="Post-contentNotifications">
+                        <div class="Post-descriptions">
+                            <span class="Post-name">New Article: HTML Best Practices</span>
+                            <span class="Post-dateNotifications">2 hours ago</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="Post-Wrapper">
+                    <img src="https://via.placeholder.com/40" alt="Post Image">
+                    <div class="Post-contentNotifications">
+                        <div class="Post-descriptions">
+                            <span class="Post-name">CSS Tips: Making Your Website Responsive</span>
+                            <span class="Post-dateNotifications">Yesterday</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="Notifications-System" id="Notifications-System" style="display: none;">
+                <div class="System-Wrapper">
+                    <img src="https://via.placeholder.com/40" alt="System Image">
+                    <div class="System-contentNotifications">
+                        <div class="System-descriptions">
+                            <span class="System-name">System Maintenance Scheduled</span>
+                            <span class="System-dateNotifications">1 day ago</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="System-Wrapper">
+                    <img src="https://via.placeholder.com/40" alt="System Image">
+                    <div class="System-contentNotifications">
+                        <div class="System-descriptions">
+                            <span class="System-name">New Feature: Dark Mode</span>
+                            <span class="System-dateNotifications">3 days ago</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="Notifications-User" id="Notifications-User" style="display: none;">
+                <div class="User-Wrapper">
+                    <img src="https://via.placeholder.com/40" alt="User Image">
+                    <div class="User-contentNotifications">
+                        <div class="User-descriptions">
+                            <span class="User-name">John Doe: Commented on your post</span>
+                            <span class="User-dateNotifications">3 hours ago</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="User-Wrapper">
+                    <img src="https://via.placeholder.com/40" alt="User Image">
+                    <div class="User-contentNotifications">
+                        <div class="User-descriptions">
+                            <span class="User-name">Jane Smith: Liked your photo</span>
+                            <span class="User-dateNotifications">5 hours ago</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        var NotificationPost = document.getElementById("Notifications-Post");
+        var NotificationSystem = document.getElementById("Notifications-System");
+        var NotificationUser = document.getElementById("Notifications-User");
+
+        function showPost(){
+            NotificationPost.style.display = "block";
+            NotificationSystem.style.display = "none";
+            NotificationUser.style.display = "none";
+            document.getElementById('btnPost').style.backgroundColor = 'rgb(240, 13, 70)';
+            document.getElementById('btnSystem').style.backgroundColor = '';
+            document.getElementById('btnUser').style.backgroundColor = '';
+        }
+
+        function showSystem(){
+            NotificationPost.style.display = "none";
+            NotificationSystem.style.display = "block";
+            NotificationUser.style.display = "none";
+            document.getElementById('btnPost').style.backgroundColor = '';
+            document.getElementById('btnSystem').style.backgroundColor = 'rgb(240, 13, 70)';
+            document.getElementById('btnUser').style.backgroundColor = '';
+        }
+
+        function showUser(){
+            NotificationPost.style.display = "none";
+            NotificationSystem.style.display = "none";
+            NotificationUser.style.display = "block";
+            document.getElementById('btnPost').style.backgroundColor = '';
+            document.getElementById('btnSystem').style.backgroundColor = '';
+            document.getElementById('btnUser').style.backgroundColor = 'rgb(240, 13, 70)';
+        }
+    </script>
+</body>
+</html>
